@@ -1,0 +1,55 @@
+Software Principles
+
+Programming and Object-Oriented principles
+
+As software app developers, it is often the case that we fall into the trap of designing projects in a more complex way than necessary. That is one of the hardest parts of being a developer because someone, someday will need to use or modify someone else project, and writing hard-code just makes things worse. That is why we’ll discuss some programming principles to avoid this.
+    • KISS: “Keep It Simple, Stupid”. The KISS programming, in particular, is really important. The simpler your code is, the simpler it will be to maintain it in the future. This will be greatly appreciated by anyone else that needs to examine your code in the future.
+    • YAGNI: “You Aren’t Gonna Need It” – Sometimes, as developers, we try to think way ahead, into the future of the project, coding some extra features “just in case we need them” or thinking “we will eventually need them”. Just one word: Wrong! You didn’t need it, you don’t need it and in most of the cases… “You Aren’t Gonna Need It”.
+    • DRY: “Don’t Repeat Yourself”. The DRY principle states that “every piece of knowledge must have a single, unambiguous, authoritative representation within a system."  In other words, you must try to maintain the behavior of a functionality of the system in a single piece of code, means don’t write duplicate code, instead use Abstraction to abstract common things in one place.
+    • Encapsulate What Changes: There is only one thing which is constant in the software field and that is “Change”, so, encapsulate the code you expect or suspect to be changed in future. The benefit of this OOP Design principle is that It’s easy to test and maintain proper encapsulated code.
+    • Favor Composition over Inheritance: There are two general ways to reuse the code you have already written, Inheritance and Composition, both have their own advantage and disadvantages, but, in general, you should always favor composition over inheritance, if possible. Composition allows changing the behavior of a class at run-time by setting property during run-time and by using Interfaces to compose a class we use polymorphism which provides flexibility to replace with better implementation any time.
+    • Programming for Interface not implementation: A programmer should always program for the interface and not for implementation; this will lead to flexible code which can work with any new implementation of the interface.
+    • Delegation principles: Don’t do all stuff by yourself, delegate it to the respective class. The key benefit of this design principle is no duplication of code and pretty easy to modify behavior.
+
+SOLID principles
+
+SOLID is an acronym for the first five object-oriented design (OOD) principles. These principles establish practices that lend to developing software with considerations for maintaining and extending as the project grows.
+SOLID stands for:
+    • S - Single-responsiblity Principle: The single responsibility principle states that a class must perform a single functionality. Implementation of multiple functionalities in a single class mashup the code and if any modification is required may affect the whole class.
+    • O - Open-closed Principle: The open-closed principle states that a module should be open for extension but closed for modification. The extension allows us to implement new functionality to the module. A class should be extendable without modifying the class itself.
+    • L - Liskov Substitution Principle: It applies to inheritance in such a way that the derived classes must be completely substitutable for their base classes. In other words, if class A is a subtype of class B, then we should be able to replace B with A without interrupting the behavior of the program.
+    • I - Interface Segregation Principle: The principle states that the larger interfaces split into smaller ones. Because the implementation classes use only the methods that are required. We should not force the client to use the methods that they do not want to use.
+    • D - Dependency Inversion Principle: The principle states that we must use abstraction (abstract classes and interfaces) instead of concrete implementations. High-level modules should not depend on the low-level module but both should depend on the abstraction. Because the abstraction does not depend on detail but the detail depends on abstraction.
+
+Patterns & Architectures
+
+MVC pattern
+
+The Model View Controller (MVC) design pattern specifies that an application consist of a data model, presentation information, and control information. MVC is more of an architectural pattern, but not for complete application. MVC mostly relates to the UI / interaction layer of an application. MVC Pattern stands for Model-View-Controller Pattern. This pattern is used to separate application's concerns.
+    • Model: Model represents an object carrying data. It can also have logic to update controller if its data changes.
+    • View: View represents the visualization of the data that model contains.
+    • Controller: Controller acts on both model and view. It controls the data flow into model object and updates the view whenever data changes. It keeps view and model separate.
+The architecture components of the MVC pattern are designed to handle different aspects of an application in development. The MVC design pattern serves to separate the presentation layer from the business logic.
+
+Advantages
+    • Multiple developers can work simultaneously on the model, controller and views.
+    • MVC enables logical grouping of related actions on a controller together. The views for a specific model are also grouped together.
+    • Models can have multiple views.
+    • Extendable code
+    • High Cohesion
+    • Easier to maintain or modify
+    • Popular in web applications
+    
+Disadvantages
+    • The framework navigation can be complex because it introduces new layers of abstraction and requires users to adapt to the decomposition criteria of MVC.
+    • Knowledge on multiple technologies becomes the norm. Developers using MVC need to be skilled in multiple technologies.
+
+Layers architecture
+
+The most common architecture pattern is the layered architecture pattern, otherwise known as the n-tier architecture pattern. The layered architecture pattern closely matches the traditional IT communication and organizational structures found in most companies, making it a natural choice for most business application development efforts. 
+Components within the layered architecture pattern are organized into horizontal layers, each layer performing a specific role within the application. Although the layered architecture pattern does not specify the number and types of layers that must exist in the pattern, most layered architectures consist of four standard layers: presentation, business, persistence, and database. Each layer of the layered architecture pattern has a specific role and responsibility within the application.
+
+One of the powerful features of the layered architecture pattern is the separation of concerns among components. Components within a specific layer deal only with logic that pertains to that layer.
+The layers of isolation concept means that changes made in one layer of the architecture generally don’t impact or affect components in other layers: the change is isolated to the components within that layer, and possibly another associated layer (such as a persistence layer containing SQL). The layers of isolation concept also means that each layer is independent of the other layers, thereby having little or no knowledge of the inner workings of other layers in the architecture. 
+While closed layers facilitate layers of isolation and therefore help isolate change within the architecture, there are times when it makes sense for certain layers to be open. 
+The layered architecture pattern is a solid general-purpose pattern, making it a good starting point for most applications, particularly when you are not sure what architecture pattern is best suited for your application. However, there are a couple of things to consider from an architecture standpoint when choosing this pattern. The first thing to watch out for is what is known as the architecture sinkhole anti-pattern. This anti-pattern describes the situation where requests flow through multiple layers of the architecture as simple pass-through processing with little or no logic performed within each layer. 
