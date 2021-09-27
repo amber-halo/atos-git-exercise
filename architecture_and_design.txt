@@ -57,3 +57,5 @@ The layered architecture pattern is a solid general-purpose pattern, making it a
 
 Step 2. Making changes in this file for the first time.
 Step 5. Solving merge conflict and merging.
+Step 6. Making changes for branch issue_4321.
+Step 7. Making changes for branch issue_4321A.
